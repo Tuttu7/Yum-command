@@ -245,27 +245,90 @@ apt-get update
 #### Upgrading a package 
 
 ```
- Update the package index and every package:
+Update the package index and every package:
+ 
 yum update
- Update only the package MY_PACKAGE:
-yum update MY_PACKAGE
- Apply security-related package updates:
-yum update --security
-Copy
-Or:
 
- Update every package:
+Update only the package MY_PACKAGE:
+
+yum update MY_PACKAGE
+
+Apply security-related package updates:
+
+yum update --security
+
+
+Update every package:
+
 apt upgrade
+
 apt-get upgrade 
- Update every package along with their dependencies:
+
+Update every package along with their dependencies:
+
 apt full-upgrade
 apt-get dist-upgrade
- Update only the package MY_PACKAGE:
+
+Update only the package MY_PACKAGE:
+
 apt-get install --only-upgrade MY_PACKAGE
- Apply security-related package updates:
+
+Apply security-related package updates:
+
 unattended-upgrade --dry-run -d
 ```
 
 #### It’s important to know that upgrading the packages along with their dependencies potentially implies uninstalling existing software and installing new software as well if this is required by the upgrade process.
 
 #### Standard upgrade commands, on the other side, will never uninstall anything. However, differently from apt-get upgrade (which also doesn’t install anything), apt upgrade might install new software if needed.
+
+
+#### Removal of a Package
+
+```
+#### Clean up
+
+To get rid of an installed package and possibly its dependencies in YUM we can do one of two equivalent commands:
+
+
+yum erase MY_PACKAGE
+
+yum remove MY_PACKAGE
+
+
+In RHEL7 and higher, it’s possible to erase also additional unneeded packages with autoremove:
+
+yum autoremove MY_PACKAGE
+
+
+The Debian ways to delete a package instead are:
+
+
+apt remove MY_PACKAGE
+
+apt-get remove MY_PACKAGE
+
+
+However, if we want to remove the package’s configuration too, completely purging the system from it, then we can exploit purge:
+
+
+apt purge MY_PACKAGE
+
+apt-get purge MY_PACKAGE
+```
+
+```
+Sometimes, our system will be polluted by orphaned packages, which are not needed anymore but are still occupying space.
+
+We can remove these unwanted packages in YUM through autoremove, without any package name:
+
+yum autoremove
+
+This also works in the same way on Debian distributions:
+
+apt autoremove
+
+apt-get autoremove
+
+```
+
