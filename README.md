@@ -235,10 +235,11 @@ history info
 In YUM it’s:
 
 yum check-update
-Copy
+
 In APT, instead, it’s simply:
 
 apt update
+
 apt-get update
 ```
 
@@ -267,6 +268,7 @@ apt-get upgrade
 Update every package along with their dependencies:
 
 apt full-upgrade
+
 apt-get dist-upgrade
 
 Update only the package MY_PACKAGE:
@@ -286,7 +288,7 @@ unattended-upgrade --dry-run -d
 #### Removal of a Package
 
 ```
-#### Clean up
+
 
 To get rid of an installed package and possibly its dependencies in YUM we can do one of two equivalent commands:
 
@@ -316,6 +318,8 @@ apt purge MY_PACKAGE
 
 apt-get purge MY_PACKAGE
 ```
+
+#### Clean up
 
 ```
 Sometimes, our system will be polluted by orphaned packages, which are not needed anymore but are still occupying space.
