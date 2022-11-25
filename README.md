@@ -229,4 +229,43 @@ history info
 [root@ip-172-31-26-143 rpm]# yum check-update
 ```
 
+#### To update our package index. These commands don’t update any installed package, they just download the latest information about the packages that can be installed or upgraded.
 
+```
+In YUM it’s:
+
+yum check-update
+Copy
+In APT, instead, it’s simply:
+
+apt update
+apt-get update
+```
+
+#### Upgrading a package 
+
+```
+ Update the package index and every package:
+yum update
+ Update only the package MY_PACKAGE:
+yum update MY_PACKAGE
+ Apply security-related package updates:
+yum update --security
+Copy
+Or:
+
+ Update every package:
+apt upgrade
+apt-get upgrade 
+ Update every package along with their dependencies:
+apt full-upgrade
+apt-get dist-upgrade
+ Update only the package MY_PACKAGE:
+apt-get install --only-upgrade MY_PACKAGE
+ Apply security-related package updates:
+unattended-upgrade --dry-run -d
+```
+
+#### It’s important to know that upgrading the packages along with their dependencies potentially implies uninstalling existing software and installing new software as well if this is required by the upgrade process.
+
+#### Standard upgrade commands, on the other side, will never uninstall anything. However, differently from apt-get upgrade (which also doesn’t install anything), apt upgrade might install new software if needed.
