@@ -342,7 +342,7 @@ apt-get autoremove
 
 #### To list all available security updates without installing them, run:
 
-``
+```
 
 [root@ip-172-31-84-146 ~]# yum updateinfo list security all
 Updating Subscription Management repositories.
