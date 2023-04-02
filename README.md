@@ -336,3 +336,187 @@ apt-get autoremove
 
 ```
 
+
+
+
+
+#### To list all available security updates without installing them, run:
+
+``
+
+[root@ip-172-31-84-146 ~]# yum updateinfo list security all
+Updating Subscription Management repositories.
+Unable to read consumer identity
+
+This system is not registered with an entitlement server. You can use subscription-manager to register.
+
+Last metadata expiration check: 0:03:46 ago on Sun 02 Apr 2023 07:33:22 AM UTC.
+RHSA-2023:0340 Moderate/Sec.  bash-5.1.8-6.el9_1.x86_64
+RHSA-2022:8299 Low/Sec.       curl-7.76.1-19.el9.x86_64
+RHSA-2023:0333 Moderate/Sec.  curl-7.76.1-19.el9_1.1.x86_64
+RHSA-2023:0335 Moderate/Sec.  dbus-1:1.12.20-7.el9_1.x86_64
+RHSA-2023:0335 Moderate/Sec.  dbus-common-1:1.12.20-7.el9_1.noarch
+RHSA-2023:0335 Moderate/Sec.  dbus-libs-1:1.12.20-7.el9_1.x86_64
+RHSA-2023:0335 Moderate/Sec.  dbus-tools-1:1.12.20-7.el9_1.x86_64
+RHSA-2022:8385 Moderate/Sec.  dhcp-client-12:4.4.2-17.b1.el9.x86_64
+RHSA-2022:8385 Moderate/Sec.  dhcp-common-12:4.4.2-17.b1.el9.noarch
+RHSA-2022:8361 Moderate/Sec.  e2fsprogs-1.46.5-3.el9.x86_64
+RHSA-2022:8361 Moderate/Sec.  e2fsprogs-libs-1.46.5-3.el9.x86_64
+```
+
+
+####  To get a list of the currently installed security updates this command can be used:
+
+```
+
+[root@ip-172-31-84-146 ~]# yum updateinfo list security installed
+Updating Subscription Management repositories.
+Unable to read consumer identity
+
+This system is not registered with an entitlement server. You can use subscription-manager to register.
+
+Last metadata expiration check: 0:12:16 ago on Sun 02 Apr 2023 07:33:22 AM UTC.
+RHSA-2023:0340 Moderate/Sec.  bash-5.1.8-6.el9_1.x86_64
+RHSA-2022:8299 Low/Sec.       curl-7.76.1-19.el9.x86_64
+RHSA-2023:0333 Moderate/Sec.  curl-7.76.1-19.el9_1.1.x86_64
+RHSA-2023:0335 Moderate/Sec.  dbus-1:1.12.20-7.el9_1.x86_64
+RHSA-2023:0335 Moderate/Sec.  dbus-common-1:1.12.20-7.el9_1.noarch
+RHSA-2023:0335 Moderate/Sec.  dbus-libs-1:1.12.20-7.el9_1.x86_64
+RHSA-2023:0335 Moderate/Sec.  dbus-tools-1:1.12.20-7.el9_1.x86_64
+RHSA-2022:8385 Moderate/Sec.  dhcp-client-12:4.4.2-17.b1.el9.x86_64
+RHSA-2022:8385 Moderate/Sec.  dhcp-common-12:4.4.2-17.b1.el9.noarch
+RHSA-2022:8361 Moderate/Sec.  e2fsprogs-1.46.5-3.el9.x86_64
+RHSA-2022:8361 Moderate/Sec.  e2fsprogs-libs-1.46.5-3.el9.x86_64
+RHSA-2023:0337 Moderate/Sec.  expat-2.4.9-1.el9_1.1.x86_64
+RHSA-2023:1141 Moderate/Sec.  gnutls-3.7.6-18.el9_1.x86_64
+RHSA-2023:0752 Moderate/Sec.  grub2-common-1:2.06-46.el9_1.3.noarch
+RHSA-2023:0752 Moderate/Sec.  grub2-pc-1:2.06-46.el9_1.3.x86_64
+RHSA-2023:0752 Moderate/Sec.  grub2-pc-modules-1:2.06-46.el9_1.3.noarch
+RHSA-2023:0752 Moderate/Sec.  grub2-tools-1:2.06-46.el9_1.3.x86_64
+RHSA-2023:0752 Moderate/Sec.  grub2-tools-minimal-1:2.06-46.el9_1.3.x86_64
+RHSA-2023:0334 Important/Sec. kernel-5.14.0-162.12.1.el9_1.x86_64
+RHSA-2023:0951 Important/Sec. kernel-5.14.0-162.18.1.el9_1.x86_64
+RHSA-2023:1470 Important/Sec. kernel-5.14.0-162.22.2.el9_1.x86_64
+RHSA-2022:8267 Moderate/Sec.  kernel-5.14.0-162.6.1.el9_1.x86_64
+RHSA-2023:0334 Important/Sec. kernel-core-5.14.0-162.12.1.el9_1.x86_64
+RHSA-2023:0951 Important/Sec. kernel-core-5.14.0-162.18.1.el9_1.x86_64
+RHSA-2023:1470 Important/Sec. kernel-core-5.14.0-162.22.2.el9_1.x86_64
+RHSA-2022:8267 Moderate/Sec.  kernel-core-5.14.0-162.6.1.el9_1.x86_64
+RHSA-2023:0334 Important/Sec. kernel-modules-5.14.0-162.12.1.el9_1.x86_64
+RHSA-2023:0951 Important/Sec. kernel-modules-5.14.0-162.18.1.el9_1.x86_64
+RHSA-2023:1470 Important/Sec. kernel-modules-5.14.0-162.22.2.el9_1.x86_64
+RHSA-2022:8267 Moderate/Sec.  kernel-modules-5.14.0-162.6.1.el9_1.x86_64
+RHSA-2023:0334 Important/Sec. kernel-tools-5.14.0-162.12.1.el9_1.x86_64
+RHSA-2023:0951 Important/Sec. kernel-tools-5.14.0-162.18.1.el9_1.x86_64
+RHSA-2023:1470 Important/Sec. kernel-tools-5.14.0-162.22.2.el9_1.x86_64
+RHSA-2022:8267 Moderate/Sec.  kernel-tools-5.14.0-162.6.1.el9_1.x86_64
+RHSA-2023:0334 Important/Sec. kernel-tools-libs-5.14.0-162.12.1.el9_1.x86_64
+
+```
+
+
+
+#### Install security updates using yum utility:
+
+```
+
+root@ip-172-31-84-146 ~]# yum -y update --security
+Updating Subscription Management repositories.
+Unable to read consumer identity
+
+This system is not registered with an entitlement server. You can use subscription-manager to register.
+
+Last metadata expiration check: 0:02:22 ago on Sun 02 Apr 2023 07:48:11 AM UTC.
+Dependencies resolved.
+================================================================================================
+ Package                     Arch    Version                  Repository                   Size
+================================================================================================
+Installing:
+ kernel                      x86_64  5.14.0-162.22.2.el9_1    rhel-9-baseos-rhui-rpms     1.9 M
+ kernel-core                 x86_64  5.14.0-162.22.2.el9_1    rhel-9-baseos-rhui-rpms      46 M
+ kernel-modules              x86_64  5.14.0-162.22.2.el9_1    rhel-9-baseos-rhui-rpms      34 M
+Upgrading:
+ bash                        x86_64  5.1.8-6.el9_1            rhel-9-baseos-rhui-rpms     1.7 M
+ curl                        x86_64  7.76.1-19.el9_1.1        rhel-9-baseos-rhui-rpms     299 k
+ dbus                        x86_64  1:1.12.20-7.el9_1        rhel-9-baseos-rhui-rpms     8.0 k
+ dbus-common                 noarch  1:1.12.20-7.el9_1        rhel-9-baseos-rhui-rpms      18 k
+ dbus-libs                   x86_64  1:1.12.20-7.el9_1        rhel-9-baseos-rhui-rpms     155 k
+ dbus-tools                  x86_64  1:1.12.20-7.el9_1        rhel-9-baseos-rhui-rpms      56 k
+ dhcp-client                 x86_64  12:4.4.2-17.b1.el9       rhel-9-baseos-rhui-rpms     794 k
+ dhcp-common                 noarch  12:4.4.2-17.b1.el9       rhel-9-baseos-rhui-rpms     131 k
+ e2fsprogs                   x86_64  1.46.5-3.el9             rhel-9-baseos-rhui-rpms     1.0 M
+ e2fsprogs-libs              x86_64  1.46.5-3.el9             rhel-9-baseos-rhui-rpms     225 k
+
+```
+
+
+#### yum update --security 
+
+```
+
+Will update any package that have at least one errata to the latest available version.
+
+```
+
+#### Meanwhile :
+
+
+#### yum update-minimal --security
+
+```
+
+Will update any package to the exact version where the last errata is fixed / remediated.
+
+```
+
+#### Using –changelog option you can find out if particular security bug is fixed or not. 
+
+```
+
+[root@ip-172-31-84-146 ~]# rpm -q --changelog openssl
+* Wed Feb 08 2023 Dmitry Belyavskiy <dbelyavs@redhat.com> - 1:3.0.1-46
+- Fixed X.509 Name Constraints Read Buffer Overflow
+  Resolves: CVE-2022-4203
+- Fixed Timing Oracle in RSA Decryption
+  Resolves: CVE-2022-4304
+- Fixed Double free after calling PEM_read_bio_ex
+  Resolves: CVE-2022-4450
+- Fixed Use-after-free following BIO_new_NDEF
+  Resolves: CVE-2023-0215
+- Fixed Invalid pointer dereference in d2i_PKCS7 functions
+  Resolves: CVE-2023-0216
+- Fixed NULL dereference validating DSA public key
+  Resolves: CVE-2023-0217
+- Fixed X.400 address type confusion in X.509 GeneralName
+  Resolves: CVE-2023-0286
+- Fixed NULL dereference during PKCS7 data verification
+  Resolves: CVE-2023-0401
+
+* Thu Jan 05 2023 Dmitry Belyavskiy <dbelyavs@redhat.com> - 1:3.0.1-45
+- Refactor OpenSSL fips module MAC verification
+  Resolves: rhbz#2158413
+- Disallow SHAKE in RSA-OAEP decryption in FIPS mode
+  Resolves: rhbz#2144011
+
+* Wed Nov 30 2022 Clemens Lang <cllang@redhat.com> - 1:3.0.1-44.1
+- Fix explicit indicator for PSS salt length in FIPS mode when used with
+  negative magic values
+  Resolves: rhbz#2144013
+- Update change to default PSS salt length with patch state from upstream 
+  Related: rhbz#2144013
+
+* Mon Nov 14 2022 Dmitry Belyavskiy <dbelyavs@redhat.com> - 1:3.0.1-44
+- SHAKE-128/256 are not allowed with RSA in FIPS mode
+  Resolves: rhbz#2144010
+- Avoid memory leaks in TLS
+  Resolves: rhbz#2144008
+- FIPS RSA CRT tests must use correct parameters
+  Resolves: rhbz#2144006
+- FIPS-140-3 permits only SHA1, SHA256, and SHA512 for DRBG-HASH/DRBG-HMAC
+  Resolves: rhbz#2144017
+- Remove support for X9.31 signature padding in FIPS mode
+  Resolves: rhbz#2144015
+```
+
+
+
